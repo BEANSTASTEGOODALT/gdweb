@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta name="color-scheme" content="dark">
     <meta name="theme-color" content="#000000">
-    <link rel="icon" href="/ref/logo.png">
+    <link rel="icon" href="/gdweb/ref/logo.png">
     <title>Geometry Dash WASM</title>
 
     <script>
         if ('serviceWorker' in navigator && location.protocol === 'https:' && !location.origin.includes('googleusercontent')) {
             window.addEventListener('load', function() {
                 try {
-                    navigator.serviceWorker.register('/sw.js')
+                    navigator.serviceWorker.register('/gdweb/sw.js')
                         .then(function(reg) {
                             console.log('Service Worker registered! Scope:', reg.scope);
                         })
@@ -26,7 +26,7 @@
     </script>
 
     <script>
-        window.__CDN_BASE = "/";
+        window.__CDN_BASE = "/gdweb/";
 
         // Disable Scramjet to avoid 404 errors on missing files
         window.__gdScramjetOff = true;
@@ -326,7 +326,7 @@
             left: 0;
             width: 200%;
             height: 108%;
-            background: url("/ref/fondo_gd.jpg") repeat-x;
+            background: url("/gdweb/ref/fondo_gd.jpg") repeat-x;
             background-size: 50% 100%;
             filter: blur(12px);
             animation: bgdrift 90s linear infinite;
@@ -658,7 +658,7 @@
     <div id="errOverlay" role="alert"></div>
     <div id="bg"></div>
     <div id="app">
-        <div id="midbar"><img src="/ref/logo.png" alt="logo" onerror="this.style.display='none'"></div>
+        <div id="midbar"><img src="/gdweb/ref/logo.png" alt="logo" onerror="this.style.display='none'"></div>
         <div id="stage"><canvas id="canvas" width="1920" height="1080"></canvas></div>
         <div id="midbar">
             <div id="bars">
@@ -690,8 +690,8 @@
         <div id="console"></div>
     </div>
     <div id="start">
-        <div id="logoFly"><img src="/ref/logo.png" alt="logo" onerror="this.style.display='none'"></div>
-        <div id="loadFly"><img src="/ref/load.png" alt="load" onerror="this.parentElement.textContent='LOADING…';this.remove()"></div>
+        <div id="logoFly"><img src="/gdweb/ref/logo.png" alt="logo" onerror="this.style.display='none'"></div>
+        <div id="loadFly"><img src="/gdweb/ref/load.png" alt="load" onerror="this.parentElement.textContent='LOADING…';this.remove()"></div>
     </div>
 
     <script>
